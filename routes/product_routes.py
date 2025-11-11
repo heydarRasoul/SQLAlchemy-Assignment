@@ -17,9 +17,9 @@ def get_all_products_route():
 def get_product_by_id_route(product_id):
   return controllers.get_product_by_id(product_id)
 
-@product.route('/products/<company_id>', methods=['GET'])
-def get_products_by_company_route(company_id):
-  return controllers.get_products_by_company(company_id)
+@product.route('/product/company/<company_id>', methods=['GET'])
+def get_product_by_company_route(company_id):
+  return controllers.get_product_by_company(company_id)
 
 @product.route('/products/active', methods=['GET'])
 def get_active_products_route():

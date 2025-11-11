@@ -140,7 +140,7 @@ def get_product_by_id(product_id):
 
     return jsonify({"message": "product found", "result": product_dict}), 200
 
-def get_products_by_company(company_id):
+def get_product_by_company(company_id):
     products = db.session.query(Products).filter(Products.company_id == company_id).all()
     
     if not products:
